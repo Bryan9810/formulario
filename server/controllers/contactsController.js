@@ -12,7 +12,7 @@ router.post("/insert", (req, res) => {
 
     let body = req.body
 
-    if(!body.name_contact || !body.lastname || !body.email || !body.organization || !body.message  )
+    if(!body.name_contact || !body.lastname || !body.email || !body.area || !body.experience || !body.linkedin || !body.twitter || !body.link_hdv || !body.phone )
         return response.server(res, 400, 0, "Todos los campos son obligatorios, por favor digítalos.")
 
     contactsModel.addRegister(body, (err, data) => {
