@@ -16,7 +16,7 @@ contactsModel.addRegister = (body, callback) => {
     let twitter = body.twitter
     let link_hdv = body.link_hdv
     let phone = body.phone
-    let date_register = date_register
+    let date_register = body.date_register
     let portals_id_portals = body.portals_id_portals
    
     database.query("CALL spr_add_register (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", [id_contacts, name_contact, lastname, email, area, experience, linkedin, twitter, link_hdv, phone, date_register, portals_id_portals]).then(() => {
